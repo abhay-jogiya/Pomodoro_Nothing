@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pomodoro</string>
+    <string name="widget_label">Pomodoro</string>
+    <string name="widget_description">Translucent focus timer with play, reset and skip.</string>
+    <string name="cd_toggle">Start or pause</string>
+    <string name="cd_reset">Reset</string>
+    <string name="cd_skip">Skip to next phase</string>
+</resources>

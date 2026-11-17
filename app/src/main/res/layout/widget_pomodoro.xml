@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Wide layout (3-4 cells). Same view IDs as widget_pomodoro_compact. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/widget_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/widget_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="14dp"
+        android:paddingBottom="12dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/widget_phase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:letterSpacing="0.2"
+                android:maxLines="1"
+                android:shadowColor="#80000000"
+                android:shadowRadius="6"
+                android:textColor="#FFD71921"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Chronometer
+                    android:id="@+id/widget_time_live"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:includeFontPadding="false"
+                    android:shadowColor="#80000000"
+                    android:shadowRadius="8"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/widget_time_static"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:includeFontPadding="false"
+                    android:shadowColor="#80000000"
+                    android:shadowRadius="8"
+                    android:text="25:00"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/widget_dots"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:letterSpacing="0.1"
+                android:maxLines="1"
+                android:shadowColor="#80000000"
+                android:shadowRadius="6"
+                android:textColor="#CCFFFFFF"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/widget_reset"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@drawable/btn_circle"
+                android:contentDescription="@string/cd_reset"
+                android:padding="9dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_reset" />
+
+            <ImageButton
+                android:id="@+id/widget_toggle"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/btn_circle_accent"
+                android:contentDescription="@string/cd_toggle"
+                android:padding="13dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_play" />
+
+            <ImageButton
+                android:id="@+id/widget_skip"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@drawable/btn_circle"
+                android:contentDescription="@string/cd_skip"
+                android:padding="9dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_skip" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

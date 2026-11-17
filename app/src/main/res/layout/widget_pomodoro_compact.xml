@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Compact layout (about 2 cells wide). Same view IDs as widget_pomodoro. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/widget_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/widget_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/widget_phase"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="monospace"
+                android:letterSpacing="0.15"
+                android:maxLines="1"
+                android:shadowColor="#80000000"
+                android:shadowRadius="6"
+                android:textColor="#FFD71921"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/widget_dots"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:shadowColor="#80000000"
+                android:shadowRadius="6"
+                android:textColor="#CCFFFFFF"
+                android:textSize="8sp" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <Chronometer
+                android:id="@+id/widget_time_live"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="monospace"
+                android:includeFontPadding="false"
+                android:shadowColor="#80000000"
+                android:shadowRadius="8"
+                android:textColor="#FFFFFFFF"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/widget_time_static"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="monospace"
+                android:includeFontPadding="false"
+                android:shadowColor="#80000000"
+                android:shadowRadius="8"
+                android:text="25:00"
+                android:textColor="#FFFFFFFF"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/widget_reset"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/btn_circle"
+                android:contentDescription="@string/cd_reset"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_reset" />
+
+            <ImageButton
+                android:id="@+id/widget_toggle"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/btn_circle_accent"
+                android:contentDescription="@string/cd_toggle"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_play" />
+
+            <ImageButton
+                android:id="@+id/widget_skip"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/btn_circle"
+                android:contentDescription="@string/cd_skip"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_skip" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
